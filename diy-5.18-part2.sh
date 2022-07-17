@@ -20,9 +20,6 @@ sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz
 ########### 更改大雕源码（可选）###########
 sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.18/g' target/linux/x86/Makefile
 
-##临时修复fast-classifier
-sed -i "s/LINUX_VERSION_CODE >= KERNEL_VERSION(5, 15, 0) && LINUX_VERSION_CODE < KERNEL_VERSION(5, 18, 0)/LINUX_VERSION_CODE >= KERNEL_VERSION(5, 15, 0)/g"  package/lean/shortcut-fe/fast-classifier/src/fast-classifier.c
-
 ########### 更改默认主题（可选）###########
 # 删除自定义源默认的 argon 主题
 # rm -rf package/lean/luci-theme-argon
