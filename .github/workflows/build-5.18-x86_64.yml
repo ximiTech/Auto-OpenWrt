@@ -67,6 +67,13 @@ jobs:
        rm -rf luci-theme-argon  
        git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 
+    - name: luci-theme-neobird install
+      run: |
+       cd openwrt
+       cd package/lean
+       rm -rf luci-theme-neobird
+       git clone https://github.com/thinktip/luci-theme-neobird.git
+       
     - name: luci-app-openclash install
       run: |
         cd openwrt
