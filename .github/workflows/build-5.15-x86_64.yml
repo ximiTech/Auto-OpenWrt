@@ -85,7 +85,7 @@ jobs:
         echo "luci-app-openclash" >> .git/info/sparse-checkout
         git pull --depth 1 origin master
         git branch --set-upstream-to=origin/master
-        git reset --hard b58a0b8759c95fbd489b3e6934929ffa3171e119
+        git reset --hard 3cfbe779ade86cb3b5f6fd4e067bf74423880170
         
     - name: Load custom feeds
       run: |
