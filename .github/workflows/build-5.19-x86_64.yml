@@ -59,7 +59,7 @@ jobs:
        df -hT $PWD
        git clone $REPO_URL -b $REPO_BRANCH openwrt
        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-       git reset --hard 84c7916464379a82d130bd454b08d67ed7ecdca9
+#      git reset --hard 84c7916464379a82d130bd454b08d67ed7ecdca9
        
     - name: luci-theme-argon install
       run: |
