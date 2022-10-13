@@ -80,7 +80,7 @@ jobs:
         cd openwrt
         mkdir package/luci-app-poweroff
         cd package/luci-app-poweroff
-        git clone https://github.com/esirplayground/luci-app-poweroff.git
+        git clone https://github.com/ximiTech/luci-app-poweroff.git
         
     - name: luci-app-openclash install
       run: |
