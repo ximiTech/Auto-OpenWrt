@@ -90,12 +90,8 @@ jobs:
         
     - name: luci-app-msd_lite install
       run: |
-        cd openwrt
-        mkdir package/luci-app-msd_lite
-        cd package/luci-app-msd_lite
-        wget https://github.com/ximiTech/intelligentclicker/raw/main/luci-app-msd_lite.zip
-        unzip luci-app-msd_lite.zip
-        rm luci-app-msd_lite.zip
+        cd openwrt/package
+        git clone https://github.com/ximiTech/luci-app-msd_lite.git
         
     - name: luci-app-openclash install
       run: |
