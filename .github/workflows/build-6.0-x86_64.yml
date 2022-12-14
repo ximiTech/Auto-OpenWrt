@@ -86,7 +86,14 @@ jobs:
         mkdir package/luci-app-poweroff
         cd package/luci-app-poweroff
         git clone https://github.com/ximiTech/luci-app-poweroff.git
-   
+
+    - name: luci-app-msd_lite install
+      run: |
+        cd openwrt
+        mkdir package/luci-app-msd_lite
+        cd package/luci-app-msd_lite
+        git clone https://github.com/ximiTech/luci-app-msd_lite.git
+
     - name: luci-app-openclash install
       run: |
         cd openwrt
