@@ -31,7 +31,7 @@ sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz
 
 ########### 更新lean的内置的smartdns版本 ###########
 sed -i 's/1.2022.38/1.2022.39/g' feeds/packages/net/smartdns/Makefile
-sed -i 's/5a2559f0648198c290bb8839b9f6a0adab8ebcdc/f2593b62aabcb0f089a7bef523f85f552229d053/g' feeds/packages/net/smartdns/Makefile
+sed -i 's/9bc857f628299573c7eca0833229d9812b1c1de4/3a1ba733860c2e4620bbf81618fe8f556649bb93/g' feeds/packages/net/smartdns/Makefile
 sed -i 's/^PKG_MIRROR_HASH/#&/' feeds/packages/net/smartdns/Makefile
 
 ########### 安装smartdns（必选）###########
