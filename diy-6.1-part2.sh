@@ -39,7 +39,7 @@ git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-a
 # git clone https://github.com/pymumu/smartdns.git package/smartdns
 
 ########### 安装解锁网易云 ###########
-git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
+git clone -b master https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
 
 ########### 安装AdguardHome ###########
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
