@@ -11,7 +11,7 @@
 #
 
 ########### 修改默认 IP ###########
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+# sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
 
 ########### 设置密码为空（可选） ###########
@@ -36,7 +36,7 @@ sed -i 's/^PKG_MIRROR_HASH/#&/' feeds/packages/net/smartdns/Makefile
 
 ########### 安装smartdns（必选）###########
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
-#git clone https://github.com/pymumu/smartdns.git package/smartdns
+# git clone https://github.com/pymumu/smartdns.git package/smartdns
 
 ########### 安装解锁网易云 ###########
 git clone -b master https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
