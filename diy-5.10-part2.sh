@@ -31,7 +31,7 @@ sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.10/g' target/linux/x86/Makefil
 
 ########### 更新lean的内置的smartdns版本 ###########
 sed -i 's/1.2022.38/1.2022.40/g' feeds/packages/net/smartdns/Makefile
-sed -i 's/9bc857f628299573c7eca0833229d9812b1c1de4/1f40577ef0d67308ea42f7150990ae611c12d4d4/g' feeds/packages/net/smartdns/Makefile
+sed -i 's/9bc857f628299573c7eca0833229d9812b1c1de4/13d028df0dfdd422f9306b616fd65b47483ac9a1/g' feeds/packages/net/smartdns/Makefile
 sed -i 's/^PKG_MIRROR_HASH/#&/' feeds/packages/net/smartdns/Makefile
 
 ########### 安装smartdns（必选）###########
