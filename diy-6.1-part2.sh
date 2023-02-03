@@ -38,6 +38,10 @@ sed -i 's/^PKG_MIRROR_HASH/#&/' feeds/packages/net/smartdns/Makefile
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 # git clone https://github.com/pymumu/smartdns.git package/smartdns
 
+########### 维持xray-core的版本 ###########
+sed -i "s/PKG_VERSION:=1.*.*/PKG_VERSION:=1.7.2/g" feeds/passwall_packages/xray-core/Makefile
+sed -i "s/PKG_HASH:=*/PKG_HASH:=skip/g" feeds/passwall_packages/xray-core/Makefile
+
 ########### 安装解锁网易云 ###########
 git clone -b master https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
 
