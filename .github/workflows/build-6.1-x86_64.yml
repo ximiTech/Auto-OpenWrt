@@ -43,10 +43,10 @@ jobs:
       with:
         go-version: '1.20'
         check-latest: true
-    
+
     - name: Get project dependencies
       run: go mod download
-    
+
     - name: Checkout
       uses: actions/checkout@main
 
@@ -62,13 +62,14 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
+
     - name: Clone source code
       working-directory: /workdir
       run: |
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-       
+
     - name: luci-theme-argon install
       run: |
        cd openwrt
