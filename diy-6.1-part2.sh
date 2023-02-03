@@ -31,8 +31,8 @@ sed -i "s/KERNEL_PATCHVER:=*.*/KERNEL_PATCHVER:=6.1/g" target/linux/x86/Makefile
 
 ########### 更新lean的内置的smartdns版本 ###########
 sed -i 's/1.2022.38/1.2022.40/g' feeds/packages/net/smartdns/Makefile
-sed -i 's/9bc857f628299573c7eca0833229d9812b1c1de4/1e29f1fa6327636a598cafe5f1704d8cfdfe3c67/g' feeds/packages/net/smartdns/Makefile
-sed -i 's/^PKG_MIRROR_HASH/#&/' feeds/packages/net/smartdns/Makefile
+sed -i "s/PKG_SOURCE_VERSION:=*/PKG_SOURCE_VERSION:=d6f9b07f1ce9462c7775cd7531db28809b010903/g" feeds/packages/net/smartdns/Makefile
+sed -i "s/PKG_MIRROR_HASH:=*/PKG_MIRROR_HASH:=skip/g" feeds/packages/net/smartdns/Makefile
 
 ########### 安装smartdns（必选）###########
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
