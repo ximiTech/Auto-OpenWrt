@@ -107,6 +107,7 @@ jobs:
         git pull --depth 1 origin dev
         git branch --set-upstream-to=origin/dev
         git reset --hard 707d81813350bd5748de9391da55351f38df1f26
+        sed -i 's/\r$//g' luci-app-openclash/root/etc/openclash/custom/openclash_custom_firewall_rules.sh
 #       git pull --depth 1 origin master
 #       git branch --set-upstream-to=origin/master
 #       git reset --hard 3cfbe779ade86cb3b5f6fd4e067bf74423880170
