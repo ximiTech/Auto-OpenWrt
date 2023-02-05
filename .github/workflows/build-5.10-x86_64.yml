@@ -106,6 +106,7 @@ jobs:
         echo "luci-app-openclash" >> .git/info/sparse-checkout
         git pull --depth 1 origin dev
         git branch --set-upstream-to=origin/dev
+        git reset --hard 707d81813350bd5748de9391da55351f38df1f26
 #       git pull --depth 1 origin master
 #       git branch --set-upstream-to=origin/master
 #       git reset --hard 3cfbe779ade86cb3b5f6fd4e067bf74423880170
