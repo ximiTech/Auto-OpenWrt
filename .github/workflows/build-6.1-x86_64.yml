@@ -109,7 +109,6 @@ jobs:
         git reset --hard 707d81813350bd5748de9391da55351f38df1f26
         sed -i 's/\r$//g' luci-app-openclash/root/etc/openclash/custom/openclash_custom_firewall_rules.sh
         sed -i 's/clashversion_check();/\/\/&/g' luci-app-openclash/luasrc/view/openclash/status.htm
-        sed -i 's/0.45.84/0.68.86/g' luci-app-openclash/Makefile
         sed -i 's/0.45.84/0.68.86/g' luci-app-openclash/root/www/luci-static/resources/openclash/img/version.svg
 #       git pull --depth 1 origin master
 #       git branch --set-upstream-to=origin/master
