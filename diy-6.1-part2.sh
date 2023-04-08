@@ -34,10 +34,6 @@ sed -i 's/KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=6.1/g' target/linux/x86/Makefile
 sed -i 's/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=fbdcb7ba41e530a379f8fd269ea870e1aaf3dff1/g' feeds/packages/net/smartdns/Makefile
 sed -i 's/PKG_MIRROR_HASH:=.*/PKG_MIRROR_HASH:=skip/g' feeds/packages/net/smartdns/Makefile
 
-########### 安装smartdns（必选）###########
-git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
-# git clone https://github.com/pymumu/smartdns.git package/smartdns
-
 ########### 维持xray-core的版本 ###########
 # sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=1.8.0/g' feeds/passwall_packages/xray-core/Makefile
 # sed -i 's/PKG_RELEASE:=.*/PKG_RELEASE:=1/g' feeds/passwall_packages/xray-core/Makefile
@@ -49,13 +45,15 @@ git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-a
 # sed -i 's/PKG_HASH:=.*/PKG_HASH:=skip/g' feeds/passwall_packages/xray-plugin/Makefile
 
 ########### 安装解锁网易云 ###########
-git clone -b master https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
-
-########### 安装AdguardHome ###########
-# git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
+# git clone -b master https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
 
 ########### 安装msd_lite ###########
 rm -rf feeds/packages/net/msd_lite
 git clone https://github.com/ximiTech/msd_lite.git feeds/packages/net/msd_lite
-# rm -rf feeds/luci/applications/luci-app-msd_lite
-# git clone https://github.com/ximiTech/luci-app-msd_lite.git feeds/luci/applications/luci-app-msd_lite
+
+########### 安装luci-theme-argon ###########
+rm -rf feeds/luci/themes/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
+
+rm -rf feeds/luci/applications/luci-app-argon-config
+git clone https://github.com/jerrykuku/luci-app-argon-config.git feeds/luci/applications/luci-app-argon-config
