@@ -93,7 +93,8 @@ jobs:
 
     - name: luci-app-openclash install
       run: |
-        cd openwrt/package
+        cd openwrt
+        cd package/lean
         git init
         git remote add -f origin https://github.com/vernesong/OpenClash.git
         git config core.sparsecheckout true
