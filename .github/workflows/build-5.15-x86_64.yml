@@ -66,6 +66,7 @@ jobs:
        cd openwrt
        cd package/lean
        git clone https://github.com/thinktip/luci-theme-neobird.git
+       sed -i 's/shadowsocksr/openclash\/client/g' luci-theme-neobird/luasrc/view/themes/neobird/header.htm
 
     - name: luci-app-poweroff install
       run: |
