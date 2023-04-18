@@ -48,6 +48,10 @@ sed -i 's/PKG_MIRROR_HASH:=.*/PKG_MIRROR_HASH:=skip/g' feeds/packages/net/smartd
 rm -rf feeds/packages/net/msd_lite
 git clone https://github.com/ximiTech/msd_lite.git feeds/packages/net/msd_lite
 
+########### 安装sing-box ###########
+rm -rf feeds/passwall_packages/sing-box
+svn co https://github.com/immortalwrt/packages/trunk/net/sing-box feeds/passwall_packages/sing-box/
+
 ########### 安装luci-theme-argon ###########
 rm -rf feeds/luci/themes/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
