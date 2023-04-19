@@ -51,6 +51,7 @@ git clone https://github.com/ximiTech/msd_lite.git feeds/packages/net/msd_lite
 ########### 安装sing-box ###########
 rm -rf feeds/passwall_packages/sing-box
 svn co https://github.com/immortalwrt/packages/trunk/net/sing-box feeds/passwall_packages/sing-box/
+sed -i '44c include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk' feeds/passwall_packages/sing-box/Makefile
 
 ########### 安装luci-theme-argon ###########
 rm -rf feeds/luci/themes/luci-theme-argon
