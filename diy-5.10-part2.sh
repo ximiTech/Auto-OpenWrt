@@ -29,6 +29,13 @@ sed -i 's/KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=5.10/g' target/linux/x86/Makefile
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
 # make menuconfig时记得勾选LuCI ---> Applications ---> luci-app-argon-config
 
+########### 添加immortal的upx包 ###########
+rm -rf package/lean/upx/
+svn co https://github.com/immortalwrt/packages/trunk/utils/upx package/lean/upx/
+rm -rf package/lean/upx/.svn/
+sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=4.0.2/g' package/lean/upx/Makefile
+sed -i 's/PKG_HASH:=.*/PKG_HASH:=skip/g' package/lean/upx/Makefile
+
 ########### 更新lean的内置的smartdns版本 ###########
 sed -i 's/1.2023.41/1.2023.42/g' feeds/packages/net/smartdns/Makefile
 sed -i 's/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=0340d272c3e7a618a5b605d7daf8ab07901ab63a/g' feeds/packages/net/smartdns/Makefile
